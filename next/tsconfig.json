@@ -12,6 +12,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    //こっちだとエディタのエラーが起きない
+    "types": ["@emotion/react/types/css-prop"],
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"]
