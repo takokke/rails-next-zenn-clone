@@ -4,7 +4,7 @@ import type { NextPage } from 'next'
 
 const buttonCss = css({
   padding: '24px',
-})  
+})
 
 const HelloMui: NextPage = () => {
   return (

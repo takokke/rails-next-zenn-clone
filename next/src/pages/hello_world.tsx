@@ -3,7 +3,7 @@ import SimpleButton from '@/components/SimpleButton'
 
 const HelloWorld: NextPage = () => {
   const hundleOnClick = () => {
-    console.log("Clicked from hello world!")
+    console.log('Clicked from hello world!')
   }
   return (
     <div>
