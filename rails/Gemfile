@@ -19,10 +19,10 @@ gem "rails", "~> 7.0.4"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # cors設定を管理する
-gem 'rack-cors'
+gem "rack-cors"
 
 # 環境毎の設定管理を行う
-gem 'config'
+gem "config"
 
 group :development, :test do
   # pry コンソールを使えるようにする。
