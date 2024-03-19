@@ -37,6 +37,11 @@ gem "devise-i18n"
 gem "devise_token_auth"
 
 group :development, :test do
+  # テスト用データを作成する
+  gem "factory_bot_rails"
+  # それっぽい文字列、数列を生成する
+  gem "faker"
+
   # 開発環境でメール送信をテストする
   gem "letter_opener_web"
   # pry コンソールを使えるようにする。
