@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :article do
-    user 
+    user
     title { Faker::Lorem.sentence }
     content { Faker::Lorem.paragraph }
     status { :published }

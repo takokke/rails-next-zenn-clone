@@ -1,12 +1,12 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Article, type: :model do
   context "factoryのデフォルト設定に従った場合" do
     subject { create(:article) }
 
     it "正常にレコードを新規作成できる" do
-        expect { subject }.to change { Article.count }.by(1)
-      end
+      expect { subject }.to change { Article.count }.by(1)
+    end
   end
 
   describe "Validations" do
@@ -19,22 +19,22 @@ RSpec.describe Article, type: :model do
     let(:user) { create(:user) }
 
     context "全ての値が正常な場合" do
-        it "検証が通る" do
-            expect(subject).to be_truthy
-        end
+      it "検証が通る" do
+        expect(subject).to be_truthy
+      end
     end
 
     context "タイトルが空かつ、ステータスが公開" do
-        let(:title) {""}
+      let(:title) { "" }
 
-        it "エラーメッセージがくる" do
-            expect(subject).to be_falsy
-            expect(article.errors.full_messages).to eq ["タイトルを入力してください"]
-        end
+      it "エラーメッセージがくる" do
+        expect(subject).to be_falsy
+        expect(article.errors.full_messages).to eq ["タイトルを入力してください"]
+      end
     end
 
     context "本文が空かつ、ステータスが公開" do
-      let(:content) {""}
+      let(:content) { "" }
 
       it "エラーメッセージがくる" do
         expect(subject).to be_falsy
