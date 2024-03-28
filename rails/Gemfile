@@ -39,6 +39,9 @@ gem "devise-i18n"
 # ユーザーのトークン認証を提供する
 gem "devise_token_auth"
 
+# ページネーション機能を提供する
+gem "kaminari"
+
 group :development, :test do
   # テスト用データを作成する
   gem "factory_bot_rails"
@@ -53,6 +56,9 @@ group :development, :test do
   gem "pry-rails"
   # テストフレームワーク rspec を導入する
   gem "rspec-rails"
+
+  # N+1発生時にアラートを表示する
+  gem "bullet"
 
   # rubocop を使えるようにする。
   gem "rubocop-faker"
