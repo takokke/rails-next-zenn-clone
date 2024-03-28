@@ -10,9 +10,6 @@ class ArticleSerializer < ActiveModel::Serializer
     now = Time.zone.now
     created_at = object.created_at
 
-    # 1. 現在の年から作成年を引いて、単位を月に変える
-    # 2. 現在の月から作成月を引く。
-    # 3. 現在日が作成日をより大きくない場合、１ヶ月経っていないので１引く
     months = (now.year - created_at.year) * 12 + now.month - created_at.month - ((now.day >= created_at.day) ? 0 : 1)
     years = months.div(12)
 
@@ -22,10 +19,9 @@ class ArticleSerializer < ActiveModel::Serializer
     seconds = (Time.zone.now - object.created_at).round
 
     days = seconds / (60 * 60 * 24)
-    return "#{days}日前" if days.positive? # 0より大きければ
+    return "#{days}日前" if days.positive?
 
     hours = seconds / (60 * 60)
-
     return "#{hours}時間前" if hours.positive?
 
     minutes = seconds / 60
