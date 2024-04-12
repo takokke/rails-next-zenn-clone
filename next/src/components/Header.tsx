@@ -80,7 +80,7 @@ const Header = () => {
                       fontSize: 16,
                       borderRadius: 2,
                       boxShadow: 'none',
-                      border: '1.5px solid #3EA8FF',
+                      border: '1px solid #3EA8FF',
                       ml: 2,
                     }}
                   >
